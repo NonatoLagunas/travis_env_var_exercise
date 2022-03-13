@@ -4,8 +4,9 @@ function sleep(ms) {
 }
 
 async function main() {
+  const message = process.env.SERVER_MESSAGE;
   while(true) {
-    console.log("Microservices rock!");
+    console.log(message);
     await sleep(5000);
   }
 }

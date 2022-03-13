@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node-travis-env .
+  - docker build -t simple-node-travis-env --build-arg SERVER_MESSAGE=${SERVER_MESSAGE} .
   - docker tag simple-node-travis-env nonato07/simple-node-travis-env:latest
 
 after_success:

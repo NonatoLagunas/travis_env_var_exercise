@@ -1,10 +1,11 @@
-ARG SERVER_MESSAGE
-ENV SERVER_MESSAGE=$SERVER_MESSAGE
 # Use NodeJS base image
 FROM node:13
 
 # Create app directory
 WORKDIR /usr/src/app
+
+ARG SERVER_MESSAGE
+ENV SERVER_MESSAGE=$SERVER_MESSAGE
 
 # Install app dependencies by copying
 # package.json and package-lock.json
